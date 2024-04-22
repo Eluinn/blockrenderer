@@ -36,9 +36,6 @@ This tool allows you to render custom minecraft blocks to 512x512 images (size c
                 "east":  { "texture": "#side", "cullface": "east" }
             }
         },
-		
-		
-		
 		{  "__comment": "Layer1 Plate1",
 			"from": [ 0, 0, 0 ],
             "to": [ 8, 2.125, 16 ],
