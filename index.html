@@ -242,18 +242,18 @@
 		function getCanvasData() {
 			var canvas = $("#canvas");
 			var size = $("#size").val();
-			canvas.attr("width", 32);
-			canvas.attr("height", 32);
+			canvas.attr("width", 512);
+			canvas.attr("height", 512);
 			draw(gl.scene, gl);
 			var result = canvas.get(0).toDataURL("image/png");
-			canvas.attr("width", 32);
-			canvas.attr("height", 32);
+			canvas.attr("width", 512);
+			canvas.attr("height", 512);
 			draw(gl.scene, gl);
 			return result;
 		}
 
 		function shouldAddModelNameToFile(name) {
-			let whitelist = ["stairs", "slab", "fence", "wall"];
+			let whitelist = ["stairs", "slab", "fence", "wall", "lbpr_stairs_stone"];
 			return whitelist.includes(name);
 		}
 		
@@ -261,7 +261,7 @@
 			$("#result").get(0).href = getCanvasData();
 			let currModel = $(".models").val();
 			let currTop = $(".presets").val();
-			$("#result").get(0).download = `${currTop}${(shouldAddModelNameToFile(currModel)) ? `_${currModel}` : ""}.png`;
+			$("#result").get(0).download = `${(shouldAddModelNameToFile(currModel)) ? `${currModel}_${currTop}` : ""}.png`;
 		}
 		
 		function outputImage() {
@@ -270,11 +270,11 @@
 	</script>
 </head>
 <body>
-	<h1>Render minecraft blocks using WebGL.</h1>
-	<canvas id="canvas" width="32" height="32" style="border:1px solid ccc;">
+	<h1>Minecraft Block Rendering using WebGL.</h1>
+	<canvas id="canvas" width="512" height="512" style="border:1px solid ccc;">
 		Your browser doesn't support WebGL, or you need to enable it.
 	</canvas>
-	<p>All these textures' width and height must be power of 2 (e.g. 16, 32, 64, ...).</p>
+	<p>Requires all textures' width and height to be in MC scale (e.g. 16, 32, 64, 128, 256, 512...).</p>
 	<table>
 	<tr>
 		<td>Model:</td>
@@ -321,7 +321,7 @@
 	<p><img id="result-img" /></p>
 	<hr />
 	<p>Original Author: Chaos <a href="http://static.chaofan.io/blockRenderer/" target="_blank">link</a></p>
-	<p>Modified by FlamingoBike#6228</p>
+	<p>Modified by FlamingoBike#6228 & Forked by Eluinn</p>
 	<script type="text/javascript">
 		try{load();}catch(e){alert(e.message);}
 	</script>
