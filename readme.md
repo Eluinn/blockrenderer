@@ -11,8 +11,8 @@ This tool allows you to render custom minecraft blocks to 512x512 images (size c
 
 ## How to Use
 
-- Serve the `index.html` page on a local web server (the easiest way to do this is to open the project with Visual Studio Code, and use the `Live Server` extension).
-    -*note: Live Server will only work on local files. You must download the repository to use it this way*
+- Host the `index.html` page on a local web server (the easiest way to do this is to open the project with Visual Studio Code, and use the `Live Server` extension).
+    - *note: Live Server will only work on local files. You must download the repository to use it this way*
 - Select a model from the dropdown menu.
 - Select textures for the top, left, and right faces from the dropdown menus, or upload your own texture.
 - Click Save File when you are ready, and it will download a png of what you have created.
@@ -50,7 +50,7 @@ This tool allows you to render custom minecraft blocks to 512x512 images (size c
                 "west":  { "texture": "#side", "cullface": "west" }
             }
         },
-        ```
+    ```
     - You would determine the name for your model, I like to use the pack name and original model name so I can find it if necessary. I also add comments to make it easier to keep track, but it is not required. Your new code would be the following
     ```
     var lbpr_stairs_stone = new Model();
