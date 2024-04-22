@@ -159,6 +159,50 @@ var models = (function() {
 	
 	var waterLily = new Model();
 	waterLily.addPlane(0, 0, 1/16, 0, 0, 1/16, 1, 1, 1/16, 1, 1, 1/16, 0, 0, 0, 0, 1, 1, 1, 1, 0);
+
+	var lbpr_stairs_stone = new Model();
+	//Main Plate
+	lbpr_stairs_stone.addCube(8/16, 0, 0, 16/16, 6.75/16, 16/16);
+	//Layer1 Plate1
+	lbpr_stairs_stone.addCube(0, 0, 0, 8/16, 2.125/16, 16/16);
+	//Layer2 Plate1
+	lbpr_stairs_stone.addCube(0.357/16, 2.125/16, 0, 8/16, 4.625/16, 6.125/16);
+	//Layer2 Plate2
+	lbpr_stairs_stone.addCube(0, 2.125/16, 2/16, 0.375/16, 4.625/16, 6.125/16);
+	//Layer2 Plate3
+	lbpr_stairs_stone.addCube(2/16, 2.125/16, 6.125/16, 8/16, 4.625/16, 10.5/16);
+	//Layer2 Plate4
+	lbpr_stairs_stone.addCube(0.375/16, 2.125/16, 10.5/16, 8/16, 4.625/16, 16/16);
+	//Layer3 Plate1
+	lbpr_stairs_stone.addCube(3.25/16, 4.625/16, 0, 8/16, 6.75/16, 3/16);
+	//Layer3 Plate2
+	lbpr_stairs_stone.addCube(3.75/16, 4.625/16, 3/16, 8/16, 6.75/16, 8.25/16);
+	//Layer3 Plate3
+	lbpr_stairs_stone.addCube(2.75/16, 4.625/16, 8.25/16, 8/16, 6.75/16, 12.75/16);
+	//Layer3 Plate4
+	lbpr_stairs_stone.addCube(3.875/16, 4.625/16, 12.75/16, 8/16, 6.75/16, 16/16);
+	//Layer4 Plate1
+	lbpr_stairs_stone.addCube(7/16, 6.75/16, 0, 16/16, 10/16, 2.5/16);
+	//Layer4 Plate2
+	lbpr_stairs_stone.addCube(5.5/16, 6.75/16, 2.5/16, 16/16, 10/16, 9.125/16);
+	//Layer4 Plate3
+	lbpr_stairs_stone.addCube(6/16, 6.75/16, 9.125/16, 16/16, 10/16, 14.75/16);
+	//Layer4 Plate4
+	lbpr_stairs_stone.addCube(7/16, 6.75/16, 14.75/16, 16/16, 10/16, 16/16);
+	//Layer5 Plate1
+	lbpr_stairs_stone.addCube(10/16, 10/16, 0, 16/16, 14.25/16, 6/16);
+	//Layer5 Plate2
+	lbpr_stairs_stone.addCube(9/16, 10/16, 6/16, 16/16, 14.25/16, 10.625/16);
+	//Layer5 Plate3
+	lbpr_stairs_stone.addCube(10.625/16, 10/16, 10.625/16, 16/16, 14.25/16, 16/16);
+	//Layer6 Plate1
+	lbpr_stairs_stone.addCube(12.625/16, 14.25/16, 0, 16/16, 16/16, 3.5/16);
+	//Layer6 Plate2
+	lbpr_stairs_stone.addCube(11.5/16, 14.25/16, 3.5/16, 16/16, 16/16, 7.875/16);
+	//Layer6 Plate3
+	lbpr_stairs_stone.addCube(13.5/16, 14.25/16, 7.875/16, 16/16, 16/16, 12.625/16);
+	//Layer6 Plate4
+	lbpr_stairs_stone.addCube(12.625/16, 14.25/16, 12.625/16, 16/16, 16/16, 16/16);
 	
 	return {
 		"cube" : cube,
@@ -170,7 +214,8 @@ var models = (function() {
 		"waterLily" : waterLily,
 		"anvil" : anvil,
 		"fence" : fence,
-		"wall" : wall
+		"wall" : wall,
+		"lbpr_stairs_stone" : lbpr_stairs_stone
 	};
 
 })();
